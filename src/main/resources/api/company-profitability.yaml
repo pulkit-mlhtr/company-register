@@ -1,0 +1,49 @@
+openapi: 3.0.3
+info:
+  title: Company Profitability API
+  description: Service to retrieve financial performance metrics based on CVR.
+  version: 1.0.0
+paths:
+  /profitability/{cvr}:
+    get:
+      tags:
+        - Profitability
+      summary: Get profitability by CVR
+      operationId: getProfitabilityByCvr
+      parameters:
+        - name: cvr
+          in: path
+          required: true
+          description: The Central Business Register (CVR) number.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful retrieval
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfitabilityResponse'
+        '404':
+          description: Company not found.
+components:
+  schemas:
+    ProfitabilityResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "In-profit / In-loss / Break-even"
+        profitability:
+          type: number
+          format: double
+          example: 15.5
+          description: The calculated profitability percentage.
+        revenue:
+          type: number
+          format: decimal
+          example: 15458685
+        netProfit:
+          type: number
+          format: decimal
+          example: 15458685
