@@ -1,5 +1,7 @@
 package com.company.adapter.in.web.controller;
 
+import com.company.adapter.out.external.mapper.ProfitabilityMapper;
+import com.company.adapter.out.external.model.Profitability;
 import com.company.adapter.out.persistence.mapper.CompanyMapper;
 import com.company.application.dto.AddOwnerRequest;
 import com.company.application.dto.CompanyResponse;
@@ -8,8 +10,11 @@ import com.company.application.dto.OwnerResponse;
 import com.company.domain.port.in.ICompanyService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
+import org.openapitools.client.model.ProfitabilityResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
 
 @RestController
 @RequestMapping("/companies")
@@ -43,5 +48,14 @@ public class CompanyController {
     @GetMapping("/{cvr}")
     public ResponseEntity<CompanyResponse> get(@PathVariable String cvr) {
         return ResponseEntity.ok(CompanyMapper.toResponse(_companyService.getCompany(cvr)));
+    }
+
+    @Operation(summary = "Get company profitability by CVR")
+    @GetMapping("/{cvr}/profit")
+    public ResponseEntity<ProfitabilityResponse> getProfitability(@PathVariable String cvr) {
+        var response = ProfitabilityMapper.toResponse(_companyService.getCompanyProfitability(cvr));
+
+        response.setStatus(String.format("%s is %s:", cvr, response.getStatus()));
+        return ResponseEntity.ok(response);
     }
 }

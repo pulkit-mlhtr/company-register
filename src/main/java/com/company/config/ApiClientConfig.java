@@ -11,7 +11,7 @@ public class ApiClientConfig {
     public ProfitabilityApi profitabilityApi() {
         // ApiClient is a helper generated in your 'gen' folder
         ApiClient apiClient = new ApiClient();
-        apiClient.setBasePath("http://profitability-service.local:8080");
+        apiClient.setBasePath("http://localhost:8080");
 
         return new ProfitabilityApi(apiClient);
     }
