@@ -1,7 +1,7 @@
 package com.company.application.service;
 
 import com.company.adapter.out.persistence.jpaRepository.JpaOwnerRepository;
-import com.company.application.dto.OwnerResponse;
+import com.company.adapter.in.web.model.OwnerResponse;
 import com.company.domain.port.in.IOwnerService;
 import org.springframework.stereotype.Service;
 

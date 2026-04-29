@@ -1,6 +1,6 @@
 package com.company.adapter.in.web.controller;
 
-import com.company.application.dto.OwnerResponse;
+import com.company.adapter.in.web.model.OwnerResponse;
 import com.company.domain.port.in.IOwnerService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.web.bind.annotation.GetMapping;

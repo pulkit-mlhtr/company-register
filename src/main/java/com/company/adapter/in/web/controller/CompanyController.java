@@ -1,20 +1,17 @@
 package com.company.adapter.in.web.controller;
 
 import com.company.adapter.out.external.mapper.ProfitabilityMapper;
-import com.company.adapter.out.external.model.Profitability;
 import com.company.adapter.out.persistence.mapper.CompanyMapper;
-import com.company.application.dto.AddOwnerRequest;
-import com.company.application.dto.CompanyResponse;
-import com.company.application.dto.CreateCompanyRequest;
-import com.company.application.dto.OwnerResponse;
+import com.company.adapter.in.web.model.AddOwnerRequest;
+import com.company.adapter.in.web.model.CompanyResponse;
+import com.company.adapter.in.web.model.CreateCompanyRequest;
+import com.company.adapter.in.web.model.OwnerResponse;
 import com.company.domain.port.in.ICompanyService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.openapitools.client.model.ProfitabilityResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.math.BigDecimal;
 
 @RestController
 @RequestMapping("/companies")

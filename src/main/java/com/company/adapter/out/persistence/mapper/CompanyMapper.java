@@ -1,8 +1,8 @@
 package com.company.adapter.out.persistence.mapper;
 
 import com.company.adapter.out.persistence.entity.CompanyEntity;
-import com.company.application.dto.CompanyResponse;
-import com.company.application.dto.CreateCompanyRequest;
+import com.company.adapter.in.web.model.CompanyResponse;
+import com.company.adapter.in.web.model.CreateCompanyRequest;
 import com.company.domain.model.Company;
 import com.company.domain.model.Owner;
 

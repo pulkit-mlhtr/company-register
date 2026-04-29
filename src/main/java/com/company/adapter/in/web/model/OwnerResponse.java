@@ -1,4 +1,4 @@
-package com.company.application.dto;
+package com.company.adapter.in.web.model;
 
 public class OwnerResponse {
 
@@ -19,5 +19,4 @@ public class OwnerResponse {
     public void setAddress(String address) { this.address = address; }
 
     public String getCompanyName() { return companyName; }
-    public void setCompanyName(String companyName) { this.companyName = companyName; }
 }

@@ -1,8 +1,8 @@
 package com.company.domain.port.in;
 
 import com.company.adapter.out.external.model.Profitability;
-import com.company.application.dto.AddOwnerRequest;
-import com.company.application.dto.OwnerResponse;
+import com.company.adapter.in.web.model.AddOwnerRequest;
+import com.company.adapter.in.web.model.OwnerResponse;
 import com.company.domain.model.Company;
 
 public interface ICompanyService {

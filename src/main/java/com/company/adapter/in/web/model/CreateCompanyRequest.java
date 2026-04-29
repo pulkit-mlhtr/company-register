@@ -1,4 +1,4 @@
-package com.company.application.dto;
+package com.company.adapter.in.web.model;
 
 import jakarta.validation.constraints.NotBlank;
 
@@ -13,10 +13,6 @@ public class CreateCompanyRequest {
 
     public String getPhone() {
         return phoneNumber;
-    }
-
-    public void setPhone(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
 
     public String getCvr() {

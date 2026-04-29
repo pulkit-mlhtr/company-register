@@ -1,4 +1,4 @@
-package com.company.application.dto;
+package com.company.adapter.in.web.model;
 
 import java.util.List;
 
@@ -23,7 +23,6 @@ public class CompanyResponse {
     public String getAddress() { return address; }
     public void setAddress(String address) { this.address = address; }
 
-    public String getPhone() { return phone; }
     public void setPhone(String phone) { this.phone = phone; }
 
     public List<OwnerResponse> getOwners() { return owners; }

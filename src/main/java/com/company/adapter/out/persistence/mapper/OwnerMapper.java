@@ -1,10 +1,8 @@
 package com.company.adapter.out.persistence.mapper;
 
 import com.company.adapter.out.persistence.entity.OwnerEntity;
-import com.company.application.dto.AddOwnerRequest;
-import com.company.application.dto.CreateCompanyRequest;
-import com.company.application.dto.OwnerResponse;
-import com.company.domain.model.Company;
+import com.company.adapter.in.web.model.AddOwnerRequest;
+import com.company.adapter.in.web.model.OwnerResponse;
 import com.company.domain.model.Owner;
 
 public class OwnerMapper {

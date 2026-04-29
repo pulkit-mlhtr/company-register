@@ -1,6 +1,6 @@
 package com.company.domain.port.in;
 
-import com.company.application.dto.OwnerResponse;
+import com.company.adapter.in.web.model.OwnerResponse;
 
 import java.util.List;
 

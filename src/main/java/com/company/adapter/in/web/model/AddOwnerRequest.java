@@ -1,4 +1,4 @@
-package com.company.application.dto;
+package com.company.adapter.in.web.model;
 
 public class AddOwnerRequest {
 
